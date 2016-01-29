@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.email       = ['thomascullen92@gmail.com']
   s.homepage    = 'https://github.com/thomascullen/sakura'
   s.summary     = 'The Sakura Toolkit'
-  s.description = 'An lightweight SASS framework that lets you keep control'
+  s.description = 'A lightweight SASS framework that lets you keep control'
   s.license     = 'MIT'
   s.executables = ['sakura']
   s.files = Dir["{lib,toolkit}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
