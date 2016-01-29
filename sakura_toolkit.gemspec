@@ -5,7 +5,7 @@ require "sakura_toolkit/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = "sakura_toolkit"
+  s.name        = 'sakura_toolkit'
   s.version     = SakuraToolkit::VERSION
   s.authors     = ['Thomas Cullen']
   s.email       = ['thomascullen92@gmail.com']
