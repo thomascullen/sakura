@@ -1,0 +1,8 @@
+@import 'components/icons';
+@import 'components/forms';
+@import 'components/buttons';
+
+@mixin components {
+  @include components-icons;
+  @include components-buttons;
+}

@@ -1,0 +1,44 @@
+@import '../../utilities/mixins';
+@import '../../variables';
+
+%notification {
+  @include position(fixed, 10px 10px null null);
+  @include animation(notification 3s $easing-pop forwards);
+  width: 280px;
+  color: #707F8E;
+  font-size: 14px;
+  line-height: 20px;
+  border-radius: 5px;
+  padding: 15px 20px;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(#000, .15),
+              0 0 10px rgba(#000, .1);
+}
+
+@mixin recipes-notification($class: '.notification') {
+  #{$class} {
+    @extend %notification;
+  }
+
+  @include keyframes(notification) {
+    0% {
+      opacity: 0;
+      @include transform(translate(200px, 0));
+    }
+
+    20% {
+      opacity: 1;
+      @include transform(translate(0, 0));
+    }
+
+    80% {
+      opacity: 1;
+      @include transform(translate(0, 0));
+    }
+
+    100% {
+      opacity: 0;
+      @include transform(translate(0, 100px));
+    }
+  };
+}

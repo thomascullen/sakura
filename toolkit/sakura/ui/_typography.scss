@@ -1,0 +1,38 @@
+$textCopy: #707F8E !default;
+$textHeader: #474D54 !default;
+$font-family: 'Lato', sans-serif !default;
+
+@mixin ui-typography($base: 15px) {
+
+  * { font-family: $font-family; }
+  html, body { font-size: $base; }
+
+  h1 {
+    font-weight: 500;
+    font-size: 2.3rem;
+    line-height: 50px;
+    color: $textHeader;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    font-weight: 500;
+    font-size: 2.8rem;
+    line-height: 44px;
+    color: $textHeader;
+  }
+
+  h3 {
+    font-weight: 300;
+    font-size: 2.4rem;
+    line-height: 32px;
+    color: $textHeader;
+  }
+
+  p{
+    color: $textCopy;
+    line-height: 28px;
+    font-size: inherit;
+    margin-bottom: 30px;
+  }
+}

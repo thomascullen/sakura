@@ -1,0 +1,39 @@
+@import '../utilities/functions';
+
+$sassy-grid-width: 1020 !default;
+$sassy-column-width: 50 !default;
+$sassy-column-padding: 35 !default;
+
+@mixin ui-grid($class: '.grid', $column_selector: '.col') {
+  $column_selector: $column_selector;
+  #{$class} {
+    width: 100%;
+    margin: 0 auto;
+    max-width: $sassy-grid-width;
+
+    $padding-percentage: percentage_of($sassy-column-padding, $sassy-grid-width);
+
+    #{$column_selector} {
+      display: inline-block;
+      box-sizing: border-box;
+      margin-left: $padding-percentage / 2;
+      margin-right: $padding-percentage / 2;
+    }
+
+    @for $i from 1 to 13 {
+      $current-column-width: ($sassy-column-width * $i + $sassy-column-padding * ($i - 1)) / $sassy-grid-width;
+
+      #{$column_selector}-#{$i} {
+        @extend #{$column_selector};
+        width: ($current-column-width * 100%);
+      }
+    }
+
+    // Responsive Columns
+    @media only screen and (max-width : 600px) {
+      @for $i from 1 to 13 {
+        #{$column_selector}-#{$i} { width: 100%; }
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@mixin components-icons($class: '.icon') {
+  #{$class} {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: -20px -20px;
+    background-image: url('toolkit/ui/icons.svg');
+  }
+}

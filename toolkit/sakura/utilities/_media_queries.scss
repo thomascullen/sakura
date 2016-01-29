@@ -1,0 +1,64 @@
+$mobile-width-breakpoint: 420px !default;
+$mobile-height-breakpoint: 700px !default;
+/// Outputs the media query for mobile devices. The mixin can also be used
+/// inside an elements styling.
+/// @example scss - Usage
+///   @incude for-mobile {
+///     .example { ... }
+///   }
+///
+///   .example {
+///     width: 200px;
+///     @include for-mobile { width: 100%; }
+///   }
+@mixin for-mobile($orientation: portrait) {
+  @media only screen
+  and (min-device-width : $mobile-width-breakpoint)
+  and (max-device-width : $mobile-height-breakpoint)
+  and (orientation: $orientation) {
+    @content;
+  }
+}
+
+$tablet-width-breakpoint: 770px !default;
+$tablet-height-breakpoint: 1024px !default;
+/// Outputs the media query for tablet devices. The mixin can also be used
+/// inside an elements styling.
+/// @example scss - Usage
+///   @incude for-tablet {
+///     .example { ... }
+///   }
+///
+///   .example {
+///     width: 200px;
+///     @include for-tablet { width: 100%; }
+///   }
+@mixin for-tablet($orientation: portrait) {
+  @media only screen
+  and (min-device-width : $tablet-width-breakpoint)
+  and (max-device-width : $tablet-height-breakpoint)
+  and (orientation: $orientation) {
+    @content;
+  }
+}
+
+/// Outputs the media query for retina laptop devices. The mixin can also be used
+/// inside an elements styling.
+/// @example scss - Usage
+///   @incude for-retina {
+///     .example { ... }
+///   }
+///
+///   .example {
+///     width: 200px;
+///     @include for-retina { width: 100%; }
+///   }
+@mixin for-retina {
+  @media screen
+  and (min-device-width: 1200px)
+  and (max-device-width: 1600px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) {
+    @content;
+  }
+}

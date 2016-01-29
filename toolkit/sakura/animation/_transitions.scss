@@ -1,0 +1,63 @@
+@import '../utilities/mixins';
+
+$pop: cubic-bezier(.65, .2, .25, 1.22);
+
+/// Sets the transition property for an element
+/// @param $values
+///   The values for the transition attribute.
+/// @example scss - Usage
+///   .example {
+///     @include transition(all 0.3s $pop);
+///   }
+@mixin transition($values) {
+  @include prefix(transition, $values, webkit moz);
+}
+
+/// Scales the element
+/// @param $to
+///   The value to scale to.
+/// @param $duration
+///   The amount of time it should take for the transition to occur.
+/// @param $easing
+///   The timing function for the transition.
+/// @example scss - Usage
+///   .example:hover {
+///     @include transition-scale(2);
+///   }
+@mixin transition-scale($to: 1, $duration: .3s, $easing: $pop) {
+  @include visible();
+  @include transition(transform $duration $easing);
+  @include transform(scale($to));
+}
+
+/// Slides the element along the X axis
+/// @param $to
+///   The amount of px's to move the element.
+/// @param $duration
+///   The amount of time it should take for the transition to occur.
+/// @param $easing
+///   The timing function for the transition.
+/// @example scss - Usage
+///   .example:hover {
+///     @include transition-slide-x(100px);
+///   }
+@mixin transition-slide-x($amount: 0, $duration: .3s, $easing: $pop) {
+  @include transition(transform $duration $easing);
+  @include transform(translate($amount, 0));
+}
+
+/// Slides the element along the Y axis
+/// @param $to
+///   The amount of px's to move the element.
+/// @param $duration
+///   The amount of time it should take for the transition to occur.
+/// @param $easing
+///   The timing function for the transition.
+/// @example scss - Usage
+///   .example:hover {
+///     @include transition-slide-y(100px);
+///   }
+@mixin transition-slide-y($amount: 0, $duration: .3s, $easing: $pop) {
+  @include transition(transform $duration $easing);
+  @include transform(translate(0, $amount));
+}

@@ -1,0 +1,7 @@
+@import 'sakura/ui';
+@import 'sakura/utilities';
+@import 'sakura/animation';
+
+@mixin sakura {
+  @include components;
+}

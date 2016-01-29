@@ -1,0 +1,10 @@
+@mixin white-tile($padding) {
+  @if $padding {
+    padding: $padding;
+  }
+
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(#000, .15),
+              0 0 10px rgba(#000, .1);
+}

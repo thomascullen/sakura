@@ -1,0 +1,49 @@
+$buttonText: #fff !default;
+$buttonBG: #93A6B8 !default;
+$actionButtonText: #fff !default;
+$actionButtonBG: #459FF5 !default;
+$warningButtonText: #fff !default;
+$warningButtonBG: #FD6686 !default;
+
+@mixin components-buttons($class: '.button') {
+  #{$class} { @extend %button; }
+  #{$class}-warning { @extend %button-warning; }
+  #{$class}-disabled { @extend %button-disabled; }
+}
+
+%button {
+  border: none;
+  cursor: pointer;
+  font-size: 0.9em;
+  border-radius: 3px;
+  color: $buttonText;
+  display: inline-block;
+  text-decoration: none;
+  padding: 8px 15px 8px 15px;
+  background-color: $buttonBG;
+  box-shadow: 0 1px 3px rgba(#000, 0.1);
+  &:hover { background: darken($buttonBG, 5); }
+}
+
+%button-action {
+  @extend %button;
+  color: $actionButtonText;
+  background-color: $actionButtonBG;
+  &:hover { background-color: darken($actionButtonBG, 5); }
+}
+
+%button-warning {
+  @extend %button;
+  color: $warningButtonText;
+  background-color: $warningButtonBG;
+  &:hover { background-color: darken($warningButtonBG, 5); }
+}
+
+%button-disabled {
+  @extend %button;
+  color: #fff;
+  box-shadow: none;
+  cursor: not-allowed;
+  background-color: #D6DDE4;
+  &:hover { background-color: darken(#D6DDE4, 5); }
+}
