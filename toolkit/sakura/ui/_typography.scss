@@ -1,38 +1,84 @@
 $textCopy: #707F8E !default;
 $textHeader: #474D54 !default;
+$color-link: #459FF5 !default;
+$sakura-color-subtle: #EBEDF0 !default;
 $font-family: 'Lato', sans-serif !default;
+$font-base: 15px !default;
 
-@mixin ui-typography($base: 15px) {
+@mixin sakura-ui-typography($base: $font-base) {
 
   * { font-family: $font-family; }
   html, body { font-size: $base; }
 
   h1 {
     font-weight: 500;
-    font-size: 2.3rem;
+    font-size: 2.4rem;
     line-height: 50px;
     color: $textHeader;
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
   }
 
   h2 {
     font-weight: 500;
-    font-size: 2.8rem;
+    font-size: 2rem;
     line-height: 44px;
     color: $textHeader;
+    margin-bottom: 1rem;
   }
 
   h3 {
     font-weight: 300;
-    font-size: 2.4rem;
+    font-size: 1.8rem;
     line-height: 32px;
     color: $textHeader;
+    margin-bottom: 1rem;
   }
 
-  p{
-    color: $textCopy;
-    line-height: 28px;
-    font-size: inherit;
-    margin-bottom: 30px;
+  h4 {
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.7rem;
+    color: $textHeader;
+    margin-bottom: 1rem;
   }
-}
+
+  h5 {
+    font-weight: 600;
+    font-size: 1.3rem;
+    line-height: 1.7rem;
+    color: $textHeader;
+    margin-bottom: 1rem;
+  }
+
+  h6 {
+    font-weight: 800;
+    font-size: 0.9rem;
+    line-height: 1.8rem;
+    color: $textHeader;
+    text-transform: uppercase;
+    margin-bottom: 0.4rem;
+  }
+
+  p {
+    color: $textCopy;
+    line-height: 1.8rem;
+    font-size: 1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  a {
+    font-weight: 600;
+    color: $color-link;
+    text-decoration: none;
+    &:hover { text-decoration: underline; }
+  }
+
+  blockquote {
+    color: $textCopy;
+    font-size: 1.2rem;
+    font-style: italic;
+    padding-left: 2rem;
+    border-left: 2px solid $sakura-color-subtle;
+    margin-bottom: 1.25rem;
+  }
+ }

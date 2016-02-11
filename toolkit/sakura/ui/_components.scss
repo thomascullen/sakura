@@ -2,7 +2,7 @@
 @import 'components/forms';
 @import 'components/buttons';
 
-@mixin components {
+@mixin sakura-components {
   @include components-icons;
-  @include components-buttons;
+  @include sakura-components-buttons;
 }

@@ -4,7 +4,7 @@ $sassy-grid-width: 1020 !default;
 $sassy-column-width: 50 !default;
 $sassy-column-padding: 35 !default;
 
-@mixin ui-grid($class: '.grid', $column_selector: '.col') {
+@mixin sakura-ui-grid($class: '.grid', $column_selector: '.col') {
   $column_selector: $column_selector;
   #{$class} {
     width: 100%;

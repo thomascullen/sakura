@@ -5,14 +5,15 @@ $actionButtonBG: #459FF5 !default;
 $warningButtonText: #fff !default;
 $warningButtonBG: #FD6686 !default;
 
-@mixin components-buttons($class: '.button') {
-  #{$class} { @extend %button; }
+@mixin sakura-components-buttons($class: '.button') {
+  #{$class}, button { @extend %button; }
   #{$class}-warning { @extend %button-warning; }
   #{$class}-disabled { @extend %button-disabled; }
 }
 
 %button {
   border: none;
+  outline: none;
   cursor: pointer;
   font-size: 0.9em;
   border-radius: 3px;

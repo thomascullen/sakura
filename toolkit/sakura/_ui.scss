@@ -3,7 +3,9 @@
 @import 'ui/recipes';
 @import 'ui/components';
 
-@mixin ui-kit {
+@mixin sakura-ui {
   @include reset;
-  @include ui-typography;
+  @include sakura-ui-grid;
+  @include sakura-ui-typography;
+  @include sakura-components;
 }
