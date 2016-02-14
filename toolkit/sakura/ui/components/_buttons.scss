@@ -4,29 +4,39 @@ $actionButtonText: #fff !default;
 $actionButtonBG: #459FF5 !default;
 $warningButtonText: #fff !default;
 $warningButtonBG: #FD6686 !default;
+$buttonSelector: '.button' !default;
 
-@mixin sakura-components-buttons($class: '.button') {
+@mixin sakura-components-buttons($class: $buttonSelector) {
   #{$class}, button { @extend %button; }
+  #{$class}-primary { @extend %button-primary; }
   #{$class}-warning { @extend %button-warning; }
   #{$class}-disabled { @extend %button-disabled; }
 }
 
 %button {
   border: none;
+  height: 2rem;
   outline: none;
   cursor: pointer;
-  font-size: 0.9em;
+  padding: 0 15px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  line-height: 2rem;
   border-radius: 3px;
   color: $buttonText;
+  white-space: nowrap;
   display: inline-block;
   text-decoration: none;
-  padding: 8px 15px 8px 15px;
   background-color: $buttonBG;
   box-shadow: 0 1px 3px rgba(#000, 0.1);
-  &:hover { background: darken($buttonBG, 5); }
+
+  &:hover {
+    text-decoration: none;
+    background: darken($buttonBG, 5);
+  }
 }
 
-%button-action {
+%button-primary {
   @extend %button;
   color: $actionButtonText;
   background-color: $actionButtonBG;
