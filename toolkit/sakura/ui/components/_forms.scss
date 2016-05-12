@@ -1,0 +1,45 @@
+@import 'buttons';
+
+$sakura-input-shadow: rgba(#474D54, 0.1);
+$sakura-input-focus: #459FF5;
+$sakura-label: #707F8E;
+
+@mixin sakura-components-forms {
+  input[type=text],
+  input[type=email],
+  input[type=number],
+  input[type=password],
+  input[type=search],
+  input[type=tel],
+  select { @extend %sakura-input; }
+  label { @extend %sakura-label; }
+
+  textarea {
+    @extend %sakura-input;
+    min-height: 5rem;
+  }
+  input[type=submit] { @extend %sakura-button-primary; }
+}
+
+%sakura-input {
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  appearance: none;
+  background: white;
+  border-radius: 3px;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ccc;
+  padding: 0.5rem 0.8rem 0.6rem 0.8rem;
+  box-shadow: inset 0 1px 3px $sakura-input-shadow;
+
+  &:focus { border-color: $sakura-input-focus; }
+}
+
+%sakura-label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: $sakura-label;
+  margin-bottom: 0.6rem;
+}

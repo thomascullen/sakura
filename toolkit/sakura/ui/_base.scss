@@ -1,7 +1,0 @@
-@import 'typography';
-@import '../utilities/reset';
-
-@mixin ui-base {
-  @include reset;
-  @include ui-typography;
-}

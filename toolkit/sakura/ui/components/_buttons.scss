@@ -7,13 +7,13 @@ $warningButtonBG: #FD6686 !default;
 $buttonSelector: '.button' !default;
 
 @mixin sakura-components-buttons($class: $buttonSelector) {
-  #{$class}, button { @extend %button; }
-  #{$class}-primary { @extend %button-primary; }
-  #{$class}-warning { @extend %button-warning; }
-  #{$class}-disabled { @extend %button-disabled; }
+  #{$class}, button { @extend %sakura-button; }
+  #{$class}-primary { @extend %sakura-button-primary; }
+  #{$class}-warning { @extend %sakura-button-warning; }
+  #{$class}-disabled { @extend %sakura-button-disabled; }
 }
 
-%button {
+%sakura-button {
   border: none;
   height: 2rem;
   outline: none;
@@ -36,22 +36,22 @@ $buttonSelector: '.button' !default;
   }
 }
 
-%button-primary {
-  @extend %button;
+%sakura-button-primary {
+  @extend %sakura-button;
   color: $actionButtonText;
   background-color: $actionButtonBG;
   &:hover { background-color: darken($actionButtonBG, 5); }
 }
 
-%button-warning {
-  @extend %button;
+%sakura-button-warning {
+  @extend %sakura-button;
   color: $warningButtonText;
   background-color: $warningButtonBG;
   &:hover { background-color: darken($warningButtonBG, 5); }
 }
 
-%button-disabled {
-  @extend %button;
+%sakura-button-disabled {
+  @extend %sakura-button;
   color: #fff;
   box-shadow: none;
   cursor: not-allowed;

@@ -1,10 +1,11 @@
+@import 'utilities/reset';
 @import 'ui/grid';
-@import 'ui/base';
 @import 'ui/recipes';
+@import 'ui/typography';
 @import 'ui/components';
 
 @mixin sakura-ui {
-  @include reset;
+  @include sakura-reset;
   @include sakura-ui-grid;
   @include sakura-ui-typography;
   @include sakura-components;

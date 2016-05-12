@@ -30,10 +30,10 @@
   position: $position;
 
   $coordinates: (
-    top:    nth($positioning, 1),
-    left:   nth($positioning, 4),
-    right:  nth($positioning, 2),
-    bottom: nth($positioning, 3)
+  top:    nth($positioning, 1),
+  left:   nth($positioning, 4),
+  right:  nth($positioning, 2),
+  bottom: nth($positioning, 3)
   );
 
   @each $side, $value in $coordinates {
@@ -94,20 +94,20 @@
 
   @if $direction == 'top' {
     border-left: $size solid transparent;
-  	border-right: $size solid transparent;
-  	border-bottom: $size solid $color;
+    border-right: $size solid transparent;
+    border-bottom: $size solid $color;
   } @else if $direction == 'right' {
     border-top: $size solid transparent;
     border-bottom: $size solid transparent;
-  	border-left: $size solid $color;
+    border-left: $size solid $color;
   } @else if $direction == 'bottom' {
     border-top: $size solid $color;
     border-right: $size solid transparent;
     border-left: $size solid transparent;
   } @else if $direction == 'left' {
     border-top: $size solid transparent;
-  	border-right: $size solid $color;
-  	border-bottom: $size solid transparent;
+    border-right: $size solid $color;
+    border-bottom: $size solid transparent;
   } @else if $direction == 'top-left' {
     border-top: $size solid $color;
     border-right: $size solid transparent;
@@ -121,6 +121,16 @@
     border-bottom: $size solid $color;
     border-left: $size solid transparent;
   }
+}
+
+/// Sets the color for input placeholder text
+/// @example scss - Usage
+///   @include placeholder-text-color(red);
+@mixin placeholder-text-color($color) {
+  ::-webkit-input-placeholder { color: $color; }
+  :-moz-placeholder { color: $color; }
+  ::-moz-placeholder { color: $color; }
+  :-ms-input-placeholder { color: $color; }
 }
 
 // clear-fix
