@@ -41,9 +41,9 @@ $pop: cubic-bezier(.65, .2, .25, 1.22);
 ///   .example:hover {
 ///     @include transition-slide-x(100px);
 ///   }
-@mixin transition-slide-x($amount: 0, $duration: .3s, $easing: $pop) {
+@mixin transition-slide($slide-x: 0, $slide-y: 0, $duration: .3s, $easing: $pop) {
   @include transition(transform $duration $easing);
-  @include transform(translate($amount, 0));
+  @include transform(translate3d($slidex, $slide-y, 0));
 }
 
 /// Slides the element along the Y axis

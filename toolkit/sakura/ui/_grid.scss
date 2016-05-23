@@ -11,7 +11,7 @@ $sassy-column-padding: 35 !default;
     margin: 0 auto;
     max-width: $sassy-grid-width;
 
-    $padding-percentage: percentage_of($sassy-column-padding, $sassy-grid-width);
+    $padding-percentage: percentage($sassy-column-padding, $sassy-grid-width);
 
     #{$column_selector} {
       display: inline-block;

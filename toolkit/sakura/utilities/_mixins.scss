@@ -142,7 +142,6 @@
   }
 }
 
-
 @mixin keyframes($animation) {
   @-webkit-keyframes #{$animation} {
     @content;
