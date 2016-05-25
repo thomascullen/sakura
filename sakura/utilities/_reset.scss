@@ -1,3 +1,7 @@
+/// Outputs a CSS reset.
+/// @group Utilities
+/// @example scss - Usage
+///   @include sakura-reset;
 @mixin sakura-reset {
   * {
     margin: 0;
