@@ -1,0 +1,25 @@
+@charset "utf-8";
+@import '../../../sakura/sakura';
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+@include sakura-animations-slides;
+
+.animation_example {
+  padding: 50px;
+  text-align: center;
+  border-radius: 5px;
+  background: #EFF1F7;
+
+  .box {
+    width: 100px;
+    height: 100px;
+    background: white;
+    border-radius: 3px;
+    display: inline-block;
+    box-shadow: 0 1px 4px rgba(#353A4B, 0.1);
+    animation: slideInRight 1s;
+  }
+}
