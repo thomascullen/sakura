@@ -18,14 +18,12 @@
 @mixin sakura-animations-slide-in-up($offset: 200px) {
   @include keyframes('slideInUp') {
     0% {
-      opacity: 0;
-      visibility: hidden;
+      @include hidden;
       @include transform(translate3d(0, #{$offset}, 0));
     }
 
     100% {
-      opacity: 1;
-      visibility: visible;
+      @include visible;
       @include transform(translate3d(0, 0, 0));
     }
   }
@@ -34,14 +32,12 @@
 @mixin sakura-animations-slide-in-down($offset: 200px) {
   @include keyframes('slideInDown') {
     0% {
-      opacity: 0;
-      visibility: hidden;
+      @include hidden;
       @include transform(translate3d(0, -#{$offset}, 0));
     }
 
     100% {
-      opacity: 1;
-      visibility: visible;
+      @include visible;
       @include transform(translate3d(0, 0, 0));
     }
   }
@@ -50,14 +46,12 @@
 @mixin sakura-animations-slide-in-right($offset: 200px) {
   @include keyframes('slideInRight') {
     0% {
-      opacity: 0;
-      visibility: hidden;
+      @include hidden;
       @include transform(translate3d(-#{$offset}, 0, 0));
     }
 
     100% {
-      opacity: 1;
-      visibility: visible;
+      @include visible;
       @include transform(translate3d(0, 0, 0));
     }
   }
@@ -66,14 +60,12 @@
 @mixin sakura-animations-slide-in-left($offset: 200px) {
   @include keyframes('slideInLeft') {
     0% {
-      opacity: 0;
-      visibility: hidden;
+      @include hidden;
       @include transform(translate3d(#{$offset}, 0, 0));
     }
 
     100% {
-      opacity: 1;
-      visibility: visible;
+      @include visible;
       @include transform(translate3d(0, 0, 0));
     }
   }
@@ -83,14 +75,12 @@
 @mixin sakura-animations-slide-out-up($offset: 200px) {
   @include keyframes('slideOutUp') {
     0% {
-      opacity: 1;
-      visibility: visible;
+      @include visible;
       @include transform(translate3d(0, 0, 0));
     }
 
     100% {
-      opacity: 0;
-      visibility: hidden;
+      @include hidden;
       @include transform(translate3d(0, -#{$offset}, 0));
     }
   }
@@ -99,14 +89,12 @@
 @mixin sakura-animations-slide-out-down($offset: 200px) {
   @include keyframes('slideOutDown') {
     0% {
-      opacity: 1;
-      visibility: visible;
+      @include visible;
       @include transform(translate3d(0, 0, 0));
     }
 
     100% {
-      opacity: 0;
-      visibility: hidden;
+      @include hidden;
       @include transform(translate3d(0, #{$offset}, 0));
     }
   }
@@ -115,14 +103,12 @@
 @mixin sakura-animations-slide-out-left($offset: 200px) {
   @include keyframes('slideOutLeft') {
     0% {
-      opacity: 1;
-      visibility: visible;
+      @include visible;
       @include transform(translate3d(0, 0, 0));
     }
 
     100% {
-      opacity: 0;
-      visibility: hidden;
+      @include hidden;
       @include transform(translate3d(-#{$offset}, 0, 0));
     }
   }
@@ -131,14 +117,12 @@
 @mixin sakura-animations-slide-out-right($offset: 200px) {
   @include keyframes('slideOutRight') {
     0% {
-      opacity: 1;
-      visibility: visible;
+      @include visible;
       @include transform(translate3d(0, 0, 0));
     }
 
     100% {
-      opacity: 0;
-      visibility: hidden;
+      @include hidden;
       @include transform(translate3d(#{$offset}, 0, 0));
     }
   }
@@ -147,26 +131,22 @@
 @mixin sakura-animations-slide-in-and-out-up($offset: 200px) {
   @include keyframes('slideInAndOutUp') {
     0% {
-      opacity: 0;
-      visibility: hidden;
+      @include hidden;
       @include transform(translate3d(0, #{$offset}, 0));
     }
 
     25% {
-      opacity: 1;
-      visibility: visible;
+      @include visible;
       @include transform(translate3d(0, 0, 0));
     }
 
     75% {
-      opacity: 1;
-      visibility: visible;
+      @include visible;
       @include transform(translate3d(0, 0, 0));
     }
 
     100% {
-      opacity: 0;
-      visibility: hidden;
+      @include hidden;
       @include transform(translate3d(0, -#{$offset}, 0));
     }
   }
@@ -175,26 +155,22 @@
 @mixin sakura-animations-slide-in-and-out-down($offset: 200px) {
   @include keyframes('slideInAndOutDown') {
     0% {
-      opacity: 0;
-      visibility: hidden;
+      @include hidden;
       @include transform(translate3d(0, -#{$offset}, 0));
     }
 
     25% {
-      opacity: 1;
-      visibility: visible;
+      @include visible;
       @include transform(translate3d(0, 0, 0));
     }
 
     75% {
-      opacity: 1;
-      visibility: visible;
+      @include visible;
       @include transform(translate3d(0, 0, 0));
     }
 
     100% {
-      opacity: 0;
-      visibility: hidden;
+      @include hidden;
       @include transform(translate3d(0, #{$offset}, 0));
     }
   }
@@ -203,26 +179,22 @@
 @mixin sakura-animations-slide-in-and-out-left($offset: 200px) {
   @include keyframes('slideInAndOutLeft') {
     0% {
-      opacity: 0;
-      visibility: hidden;
+      @include hidden;
       @include transform(translate3d(#{$offset}, 0, 0));
     }
 
     25% {
-      opacity: 1;
-      visibility: visible;
+      @include visible;
       @include transform(translate3d(0, 0, 0));
     }
 
     75% {
-      opacity: 1;
-      visibility: visible;
+      @include visible;
       @include transform(translate3d(0, 0, 0));
     }
 
     100% {
-      opacity: 0;
-      visibility: hidden;
+      @include hidden;
       @include transform(translate3d(-#{$offset}, 0, 0));
     }
   }
@@ -231,26 +203,22 @@
 @mixin sakura-animations-slide-in-and-out-right($offset: 200px) {
   @include keyframes('slideInAndOutRight') {
     0% {
-      opacity: 0;
-      visibility: hidden;
+      @include hidden;
       @include transform(translate3d(-#{$offset}, 0, 0));
     }
 
     25% {
-      opacity: 1;
-      visibility: visible;
+      @include visible;
       @include transform(translate3d(0, 0, 0));
     }
 
     75% {
-      opacity: 1;
-      visibility: visible;
+      @include visible;
       @include transform(translate3d(0, 0, 0));
     }
 
     100% {
-      opacity: 0;
-      visibility: hidden;
+      @include hidden;
       @include transform(translate3d(#{$offset}, 0, 0));
     }
   }

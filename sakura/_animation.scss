@@ -1,2 +1,8 @@
+@import 'animation/fades';
 @import 'animation/slides';
 @import 'animation/transitions';
+
+@mixin sakura-animations {
+  @include sakura-animations-fades;
+  @include sakura-animations-slides;
+}

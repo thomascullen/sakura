@@ -1,0 +1,30 @@
+@import '../utilities/mixins';
+
+@mixin sakura-animations-fades {
+  @include sakura-animations-fade-in;
+  @include sakura-animations-fade-out;
+  @include sakura-animations-fade-in-and-out;
+}
+
+@mixin sakura-animations-fade-in {
+  @include keyframes('fadeIn') {
+    from { @include hidden; }
+    to { @include visible; }
+  }
+}
+
+@mixin sakura-animations-fade-out {
+  @include keyframes('fadeOut') {
+    from { @include visible; }
+    to { @include hidden; }
+  }
+}
+
+@mixin sakura-animations-fade-in-and-out {
+  @include keyframes('fadeInAndOut') {
+    0% { @include hidden; }
+    25% { @include visible; }
+    75% { @include visible; }
+    100% { @include hidden; }
+  }
+}
