@@ -1,0 +1,18 @@
+// Provides mixins for nth child selector
+@mixin first($amount: 1) {
+  &:nth-child(-n + $amount) {
+    @content;
+  }
+}
+
+@mixin last($amount: 1) {
+  &:nth-last-child(-n + $amount) {
+    @content;
+  }
+}
+
+@mixin every($amount) {
+  &:nth-child(#{$amount}n) {
+    @content;
+  }
+}
