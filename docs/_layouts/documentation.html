@@ -1,7 +1,48 @@
 ---
 layout: default
 ---
-<article>
-  <h1>{{ page.title }}</h1>
-  {{ content }}
-</article>
+<div class="documentation">
+  <aside>
+    <a href='/' class='logo'></a>
+
+    <ul>
+      <li><h5>General</h5></li>
+      <li><a href="/installation">Installation</a></li>
+      <li><a href="/getting_started">Getting Started</a></li>
+    </ul>
+
+    <ul>
+      <li><h5>Utilities</h5></li>
+      <li><a href="/">Reset</a></li>
+      <li><a href="/">Mixins</a></li>
+      <li><a href="/">Functions</a></li>
+      <li><a href="/">Media Queries</a></li>
+    </ul>
+
+    <ul>
+      <li><h5>UI</h5></li>
+      <li><a href="/">Grid</a></li>
+      <li><a href="/">Typography</a></li>
+      <li><a href="/">Forms</a></li>
+    </ul>
+
+    <ul>
+      <li><h5>Components</h5></li>
+      <li><a href="/">Alerts</a></li>
+      <li><a href="/">Tooltips</a></li>
+      <li><a href="/">Forms</a></li>
+    </ul>
+
+    <ul>
+      <li><h5>Animation</h5></li>
+      <li><a href="/">Fades</a></li>
+      <li><a href="/">Slides</a></li>
+      <li><a href="/">Scales</a></li>
+    </ul>
+  </aside>
+
+  <article>
+    <h1>{{ page.title }}</h1>
+    {{ content }}
+  </article>
+</div>

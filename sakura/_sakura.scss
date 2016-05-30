@@ -2,3 +2,7 @@
 @import 'animation';
 @import 'ui';
 @import 'components';
+
+@mixin sakura {
+  @include sakura-ui;
+}

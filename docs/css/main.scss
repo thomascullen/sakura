@@ -2,4 +2,60 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 @charset "utf-8";
+@import url(https://fonts.googleapis.com/css?family=Asap:400,700);
 @import '../../sakura/sakura';
+@include sakura;
+
+.documentation {
+  position: relative;
+  padding-left: 250px;
+
+  aside {
+    top: 0;
+    left: 0;
+    width: 250px;
+    min-height: 100vh;
+    position: absolute;
+    background: #EFF1F7;
+
+    .logo {
+      width: 104px;
+      height: 27px;
+      margin: 30px 40px;
+      display: block;
+      background-size: cover;
+      background-image: url('/assets/logo.png');
+    }
+
+    ul {
+      margin: 0 40px 30px 40px;
+
+      li {
+        list-style: none;
+        margin-bottom: 10px;
+      }
+
+      h5 {
+        color: #353A4B;
+        font-size: 1rem;
+        margin-bottom: 0;
+        font-weight: 600;
+      }
+
+      a {
+        color: #656C82;
+        font-weight: 400;
+        &:hover {
+          color: #353A4B;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  article {
+    width: 700px;
+    margin: 0 auto;
+    padding: 80px 0;
+  }
+}

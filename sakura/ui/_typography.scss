@@ -1,9 +1,11 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
 $textCopy: #707F8E !default;
 $textHeader: #474D54 !default;
 $color-link: #459FF5 !default;
 $sakura-color-subtle: #EBEDF0 !default;
-$font-family: 'Lato', sans-serif !default;
 $font-base: 15px !default;
+$font-family: 'Open Sans', sans-serif !default;
 
 @mixin sakura-ui-typography($base: $font-base) {
 
