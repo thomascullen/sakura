@@ -57,5 +57,16 @@
     width: 700px;
     margin: 0 auto;
     padding: 80px 0;
+
+    pre {
+      border-radius: 5px;
+      padding: 10px 15px;
+      background: #EFF1F7;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      margin-top: 50px;
+    }
   }
 }

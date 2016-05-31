@@ -22,7 +22,7 @@ $font-family: 'Open Sans', sans-serif !default;
 
   h2 {
     font-weight: 500;
-    font-size: 2rem;
+    font-size: 1.8rem;
     line-height: 44px;
     color: $textHeader;
     margin-bottom: 1rem;
@@ -55,16 +55,15 @@ $font-family: 'Open Sans', sans-serif !default;
   h6 {
     font-weight: 800;
     font-size: 0.9rem;
-    line-height: 1.8rem;
     color: $textHeader;
-    text-transform: uppercase;
+    line-height: 1.8rem;
     margin-bottom: 0.4rem;
+    text-transform: uppercase;
   }
 
   p {
-    color: $textCopy;
-    line-height: 1.8rem;
     font-size: 1rem;
+    line-height: 1.8rem;
     margin-bottom: 1.25rem;
   }
 
