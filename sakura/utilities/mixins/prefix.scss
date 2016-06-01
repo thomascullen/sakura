@@ -1,0 +1,7 @@
+/// Prefixes an attribute with a given list of vendors.
+@mixin prefix($attr, $value, $vendors: webkit moz mz) {
+  #{$attr}: $value;
+  @each $vendor in $vendors {
+    -#{$vendor}-#{$attr}: $value;
+  }
+}

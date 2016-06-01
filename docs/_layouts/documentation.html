@@ -8,6 +8,7 @@ layout: default
     <ul>
       <li><h5>General</h5></li>
       <li><a href="/getting_started">Getting Started</a></li>
+      <li><a href="/usage">Usage</a></li>
     </ul>
 
     <ul>
@@ -41,6 +42,11 @@ layout: default
 
   <article>
     <h1>{{ page.title }}</h1>
+
+    {% if page.module %}
+      <span class="module">{{ page.module }}</span>
+    {% endif %}
+
     {{ content }}
   </article>
 </div>

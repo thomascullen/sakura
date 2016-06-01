@@ -1,0 +1,16 @@
+@mixin position($position: absolute, $positioning: null null null null) {
+  position: $position;
+
+  $coordinates: (
+  top:    nth($positioning, 1),
+  left:   nth($positioning, 4),
+  right:  nth($positioning, 2),
+  bottom: nth($positioning, 3)
+  );
+
+  @each $side, $value in $coordinates {
+    @if $value {
+      #{$side}: $value;
+    }
+  }
+}

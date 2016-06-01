@@ -58,12 +58,23 @@
     margin: 0 auto;
     padding: 80px 0;
 
-    pre {
+    .module {
+      font-size: 1rem;
+      padding: 2px 10px;
+      border-radius: 3px;
+      background: #EFF1F7;
+      margin-bottom: 20px;
+      display: inline-block;
+    }
+
+    code {
       border-radius: 5px;
       padding: 10px 15px;
       background: #EFF1F7;
       margin-bottom: 20px;
     }
+
+    pre code { display: block; }
 
     h2 {
       margin-top: 50px;

@@ -1,161 +1,26 @@
-/// Prefixes an attribute with a given list of vendors.
-/// @param $attr
-///   The attribute title.
-/// @param $value
-///   The attribute value.
-/// @param $vendors
-///   The list of vendors you would like to prefix for.
-/// @example scss - Usage
-///   .example {
-///     @include prefix(border-radius, 5px, webkit moz mz);
-///   }
-@mixin prefix($attr, $value, $vendors: webkit moz mz) {
-  #{$attr}: $value;
-  @each $vendor in $vendors {
-    -#{$vendor}-#{$attr}: $value;
-  }
-}
+@import 'mixins/prefix';
+@import 'mixins/position';
+@import 'mixins/triangle';
+@import 'mixins/clearfix';
+@import 'mixins/transform';
+@import 'mixins/keyframes';
 
-/// Positions an element.
-/// @param $position
-///   The position value for the element styling
-/// @param $positioning
-///   The top, right, bottom and left attribute values in that order. Values
-///   that are set to null will be ignored.
-/// @example scss - Example
-///   .example {
-///     @include position(absolute, 50px null null 20px);
-///   }
-@mixin position($position: absolute, $positioning: null null null null) {
-  position: $position;
-
-  $coordinates: (
-  top:    nth($positioning, 1),
-  left:   nth($positioning, 4),
-  right:  nth($positioning, 2),
-  bottom: nth($positioning, 3)
-  );
-
-  @each $side, $value in $coordinates {
-    @if $value {
-      #{$side}: $value;
-    }
-  }
-}
-
-/// Applys the transform attribute to an element with all of its vendor prefixes
-/// @param $values
-///   The value of the transform attribute
-/// @example scss - Usage
-///   .example {
-///     @include transform(translate(20px, 0));
-///   }
-@mixin transform($values) {
-  @include prefix(transform, $values, webkit moz);
-}
-
-/// Hides an element. This uses opacity and visibility rather than display: none
-/// to hide an element so that it can be used with animations and transitions.
-/// @example scss - Usage
-///   .example {
-///     @include hidden;
-///   }
 @mixin hidden {
   opacity: 0;
   visibility: hidden;
 }
 
-/// Makes an element visible. This uses opacity and visiblility so that it can
-/// be used with animations and transitions.
-/// @example scss - Usage
-///   .example {
-///     @include visible;
-///   }
 @mixin visible {
   opacity: 1;
   visibility: visible;
 }
 
-/// Generates a triangle
-/// @param $direction
-///   The direction the triangle should be facing
-/// @param $color
-///   The colour of the triangle
-/// @param $size
-///   The size of the triangle
-/// @example scss - Usage
-///   .example {
-///     @include triangle('down', #000, 10px);
-///   }
-@mixin triangle($direction: 'up', $color: #fff, $size: 5px) {
-  width: 0;
-  height: 0;
-  display: block;
-
-  @if $direction == 'top' {
-    border-left: $size solid transparent;
-    border-right: $size solid transparent;
-    border-bottom: $size solid $color;
-  } @else if $direction == 'right' {
-    border-top: $size solid transparent;
-    border-bottom: $size solid transparent;
-    border-left: $size solid $color;
-  } @else if $direction == 'bottom' {
-    border-top: $size solid $color;
-    border-right: $size solid transparent;
-    border-left: $size solid transparent;
-  } @else if $direction == 'left' {
-    border-top: $size solid transparent;
-    border-right: $size solid $color;
-    border-bottom: $size solid transparent;
-  } @else if $direction == 'top-left' {
-    border-top: $size solid $color;
-    border-right: $size solid transparent;
-  } @else if $direction == 'top-right' {
-    border-top: $size solid $color;
-    border-left: $size solid transparent;
-  } @else if $direction == 'bottom-left' {
-    border-bottom: $size solid $color;
-    border-right: $size solid transparent;
-  } @else if $direction == 'bottom-right' {
-    border-bottom: $size solid $color;
-    border-left: $size solid transparent;
-  }
-}
-
-/// Sets the color for input placeholder text
-/// @example scss - Usage
-///   @include placeholder-text-color(red);
 @mixin placeholder-text-color($color) {
   ::-webkit-input-placeholder { color: $color; }
   :-moz-placeholder { color: $color; }
   ::-moz-placeholder { color: $color; }
   :-ms-input-placeholder { color: $color; }
 }
-
-// clear-fix
-@mixin clear-fix {
-  &::after {
-    clear: both;
-    content: '';
-    display: table;
-  }
-}
-
-@mixin keyframes($animation) {
-  @-webkit-keyframes #{$animation} {
-    @content;
-  }
-
-  @-moz-keyframes #{$animation} {
-    @content;
-  }
-
-  @keyframes #{$animation} {
-    @content;
-  }
-}
-
 
 @mixin animation($values) {
   @include prefix(animation, $values);
