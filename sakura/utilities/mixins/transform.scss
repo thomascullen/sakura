@@ -1,4 +1,4 @@
-@include 'prefix';
+@import 'prefix';
 
 @mixin transform($values) {
   @include prefix(transform, $values, webkit moz);

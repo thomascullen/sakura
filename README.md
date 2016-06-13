@@ -1,5 +1,5 @@
 # SakuraToolkit
-A lightweight SASS framework that lets you keep control
+A lightweight SASS framework that lets you keep control.
 
 ## Installation
 ```

@@ -1,7 +1,7 @@
 ---
 title: Getting Started
 layout: documentation
-permalink: getting_started
+permalink: getting_started/
 ---
 
 

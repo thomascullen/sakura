@@ -47,6 +47,10 @@ layout: default
       <span class="module">{{ page.module }}</span>
     {% endif %}
 
+    {% if page.module_path %}
+      <span class="module_path">{{ page.module_path }}</span>
+    {% endif %}
+
     {{ content }}
   </article>
 </div>

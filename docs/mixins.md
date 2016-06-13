@@ -2,6 +2,8 @@
 title: Mixins
 layout: documentation
 permalink: utilities/mixins
+module_path: sakura/utilities/mixins
+module: sakura-mixins
 ---
 
 ### prefix
